@@ -58,6 +58,7 @@ Shader "Custom/Phong"
                 float3 NdotV = dot(nVwd, o.Normal);
                 half rim= 1 - saturate(NdotV);
                 o.Emission = _RimColor.rgb * pow(rim, _RimPower);
+                //Emision devuelve la intensidad del color sobre una superficie
             }
         ENDCG
     }
